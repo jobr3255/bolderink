@@ -15,6 +15,8 @@ router.get('/',function(req,res){
 //add the router
 app.use('/', router);
 app.use(express.static(path.join(__dirname, 'src/css')));
-app.listen(process.env.port || 5000);
 
-console.log('Running at Port 5000');
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Our app is running on port ${ PORT }`);
+});
