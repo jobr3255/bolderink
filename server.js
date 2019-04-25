@@ -1,30 +1,24 @@
-const express = require('express');
-const app = express();
-const path = require('path');
-const router = express.Router();
+const express = require("express")
+const path = require("path")
+const routes = require('./routes')
 
-var favicon = require('serve-favicon');
-// Add favicon
-// app.use(favicon(path.join(__dirname, 'src/assets/images', 'favicon.png')));
-app.use(favicon(path.join(__dirname,'src', 'images','favicon.png')));
+const app = express()
+// Set the default views directory to html folder
+app.set('views', path.join(__dirname, 'html'))
 
 var livereload = require('livereload');
 var server = livereload.createServer();
-server.watch(__dirname + "/src");
+server.watch(__dirname + "/html");
 
-router.get('/',function(req,res){
-  res.sendFile(path.join(__dirname, 'src', 'index.html'));
-  //__dirname : It will resolve to your project folder.
-});
+// Set the folder for css & java scripts
+app.use(express.static(path.join(__dirname,'css')))
+app.use(express.static(path.join(__dirname, 'node_modules')))
+app.use(express.static(path.join(__dirname, 'images')));
 
-//add the router
-app.use('/', router);
+// Set the view engine to ejs
+app.set('view engine', 'ejs')
 
-// Add css path
-app.use(express.static(path.join(__dirname, 'src', 'css')));
-
-// Add images folder path
-app.use(express.static(path.join(__dirname, 'src', 'images')));
+app.use('/', routes)
 
 
 const PORT = process.env.PORT || 3000;

@@ -9,7 +9,7 @@
 <title>Boulder Ink</title>
 
 <link rel="stylesheet" href="https://getbootstrap.com/docs/3.4/dist/css/bootstrap.min.css">
-<!-- <link href="/app.css" rel="stylesheet" type="text/css"> -->
+<link href="/app.css" rel="stylesheet" type="text/css">
 <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
 
 </head>
@@ -18,35 +18,34 @@
   <div class="container">
 
         <!-- Static navbar -->
-        <nav class="navbar navbar-default">
+        <nav class="navbar bg-dark">
+        <a class="navbar-brand navbar-left img-responsive navbar-collapse collapse full-height" href="#">
+          <img src="/logo.png" alt="" class="img-responsive">
+        </a>
           <div class="container-fluid">
             <div class="navbar-header">
-            <a class="navbar-brand navbar-left img-responsive navbar-collapse collapse full-height" href="#">
-              <img src="/logo.png" alt="" class="img-responsive">
-            </a>
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <a class="navbar-left navbar-toggle collapsed img-responsive" style="float: left;" href="#">
+                <img src="/logo.png" alt="" style="max-height: 80px;" class="img-responsive">
+              </a>
+              <button type="button" class="dropdown navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+                <span class="dropdown icon-bar"></span>
+                <span class="dropdown icon-bar"></span>
+                <span class="dropdown icon-bar"></span>
               </button>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
-              <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+              <ul class="nav navbar-nav full-width">
+                <li class="active"><a class="nav-link" href="/">Home</a></li>
+                <li><a class="nav-link" href="#">Artists</a></li>
+                <li><a class="nav-link" href="#">Aftercare</a></li>
+                <li><a class="nav-link" href="#">FAQ</a></li>
               </ul>
             </div><!--/.nav-collapse -->
           </div><!--/.container-fluid -->
         </nav>
         <!-- Main component for a primary marketing message or call to action -->
-        <div class="jumbotron">
-          <h1>Navbar example</h1>
-          <p>This example is a quick exercise to illustrate how the default, static navbar and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
-          <p>
-            <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
-          </p>
+        <div class="jumbotron bg-dark">
         </div>
 
       </div> <!-- /container -->

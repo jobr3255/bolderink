@@ -1,0 +1,101 @@
+body {
+	background-color: #000000;
+}
+
+.full-height{
+	height: 100%;
+}
+
+.full-width{
+	width: 100%;
+}
+
+.bg-dark{
+	background-color: #343a40!important;
+	color: white;
+}
+
+.nav-link{
+	color: white;
+}
+
+.nav-link:hover{
+	color: black;
+}
+
+button.dropdown{
+	background-color: #474d53;
+}
+
+span.dropdown{
+	background-color: black;
+}
+
+.special-color-dark{
+	background-color: #263238!important;
+}
+
+footer.page-footer {
+    bottom: 0;
+    color: #fff;
+}
+
+footer.page-footer a {
+    color: #fff;
+}
+
+footer.page-footer .container-fluid {
+    width: auto;
+}
+
+.container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 768px){
+	.col-md-6 {
+	    -ms-flex: 0 0 50%;
+	    flex: 0 0 50%;
+	    max-width: 50%;
+	}
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+@media (min-width: 768px){
+	.col-md-3 {
+	    -ms-flex: 0 0 25%;
+	    flex: 0 0 25%;
+	    max-width: 25%;
+	}
+}
+
+@media (min-width: 768px){
+	.text-md-left {
+	    text-align: left!important;
+	}
+}
+
+footer.page-footer .footer-copyright {
+    overflow: hidden;
+    background-color: rgba(0,0,0,.2);
+    color: rgba(255,255,255,.6);
+}
+
+.pb-3, .py-3 {
+    padding-bottom: 1rem!important;
+}
+
+.pt-3, .py-3 {
+    padding-top: 1rem!important;
+}

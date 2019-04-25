@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/jobr3255/bolderink#readme",
   "dependencies": {
+    "ejs": "^2.6.1",
     "express": "^4.16.4",
     "livereload": "^0.7.0",
     "serve-favicon": "^2.5.0"
