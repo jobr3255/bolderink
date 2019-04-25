@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<% include ./include/head %>
+
+<body>
+  <div class="container">
+    <% include ./include/nav %>
+
+        <!-- Main component for a primary marketing message or call to action -->
+        <div class="jumbotron bg-dark">
+          <h3>Artists</h3>
+          <div class="row">
+            <div class="six columns">
+              <h4><a class="artist" href="https://www.instagram.com/tattoosbymijo/" target="_blank">Mijo</a></h4>
+              <div id="instagram-mijo" class="instagram_feed"></div>
+            </div>
+            <div class="six columns">
+              <h4><a class="artist" href="https://www.instagram.com/lancetalon/" target="_blank">Lance Talon</a></h4>
+              <div id="instagram-lance" class="instagram_feed"></div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="six columns">
+              <h4><a class="artist" href="https://www.instagram.com/joeldlong/" target="_blank">Joel Long</a></h4>
+              <div id="instagram-joel" class="instagram_feed"></div>
+            </div>
+            <div class="six columns">
+              <h4><a class="artist" href="https://www.instagram.com/bolder_brian_tattoo/" target="_blank">Brian</a></h4>
+              <div id="instagram-brian" class="instagram_feed"></div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="six columns">
+              <h4><a class="artist" href="https://www.instagram.com/bolderink/" target="_blank">Peewee</a></h4>
+              <div id="instagram-peewee" class="instagram_feed"></div>
+            </div>
+            <div class="six columns">
+              <h4><a class="artist" href="https://www.instagram.com/ploddingtortoise/" target="_blank">Aaron</a></h4>
+              <div id="instagram-aaron" class="instagram_feed"></div>
+            </div>
+          </div>
+        </div>
+
+      </div> <!-- /container -->
+
+      <script type="text/javascript" src="/jquery.instagramFeed.min.js"></script>
+    	<script type="text/javascript">
+    		(function($){
+    			$(window).on('load', function(){
+    				$.instagramFeed({
+    					'cors_proxy': "https://cors-anywhere.herokuapp.com/https://www.instagram.com/",
+    					'username': 'tattoosbymijo',
+    					'container': "#instagram-mijo",
+    					'display_profile': false,
+    					'display_biography': false,
+    					'display_gallery': true,
+    					'get_raw_json': false,
+    					'callback': null,
+    					'styling': true,
+    					'items': 8,
+    					'items_per_row': 4,
+    					'margin': 1
+    				});
+
+            $.instagramFeed({
+    					'cors_proxy': "https://cors-anywhere.herokuapp.com/https://www.instagram.com/",
+    					'username': 'lancetalon',
+    					'container': "#instagram-lance",
+    					'display_profile': false,
+    					'display_biography': false,
+    					'display_gallery': true,
+    					'get_raw_json': false,
+    					'callback': null,
+    					'styling': true,
+    					'items': 8,
+    					'items_per_row': 4,
+    					'margin': 1
+    				});
+
+            $.instagramFeed({
+    					'cors_proxy': "https://cors-anywhere.herokuapp.com/https://www.instagram.com/",
+    					'username': 'joeldlong',
+    					'container': "#instagram-joel",
+    					'display_profile': false,
+    					'display_biography': false,
+    					'display_gallery': true,
+    					'get_raw_json': false,
+    					'callback': null,
+    					'styling': true,
+    					'items': 8,
+    					'items_per_row': 4,
+    					'margin': 1
+    				});
+
+            $.instagramFeed({
+    					'cors_proxy': "https://cors-anywhere.herokuapp.com/https://www.instagram.com/",
+    					'username': 'bolder_brian_tattoo',
+    					'container': "#instagram-brian",
+    					'display_profile': false,
+    					'display_biography': false,
+    					'display_gallery': true,
+    					'get_raw_json': false,
+    					'callback': null,
+    					'styling': true,
+    					'items': 8,
+    					'items_per_row': 4,
+    					'margin': 1
+    				});
+
+            $.instagramFeed({
+    					'cors_proxy': "https://cors-anywhere.herokuapp.com/https://www.instagram.com/",
+    					'username': 'ploddingtortoise',
+    					'container': "#instagram-aaron",
+    					'display_profile': false,
+    					'display_biography': false,
+    					'display_gallery': true,
+    					'get_raw_json': false,
+    					'callback': null,
+    					'styling': true,
+    					'items': 8,
+    					'items_per_row': 4,
+    					'margin': 1
+    				});
+
+            $.instagramFeed({
+    					'cors_proxy': "https://cors-anywhere.herokuapp.com/https://www.instagram.com/",
+    					'username': 'bolderink',
+    					'container': "#instagram-peewee",
+    					'display_profile': false,
+    					'display_biography': false,
+    					'display_gallery': true,
+    					'get_raw_json': false,
+    					'callback': null,
+    					'styling': true,
+    					'items': 8,
+    					'items_per_row': 4,
+    					'margin': 1
+    				});
+    			});
+    		})(jQuery);
+    	</script>
+
+      <% include ./include/scripts %>
+      <% include ./include/footer %>
+
+</body>
+</html>

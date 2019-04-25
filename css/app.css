@@ -99,3 +99,14 @@ footer.page-footer .footer-copyright {
 .pt-3, .py-3 {
     padding-top: 1rem!important;
 }
+
+.center {
+	text-align: center;
+}
+
+.artist:link{
+	color: white;
+}
+.artist:visited{
+	color: white;
+}
