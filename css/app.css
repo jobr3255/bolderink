@@ -110,3 +110,49 @@ footer.page-footer .footer-copyright {
 .artist:visited{
 	color: white;
 }
+
+.footer-link{
+	display: inline-block;
+	width: 15%;
+	margin: auto;
+	vertical-align: middle;
+}
+
+.footer-link a:link{
+	color: white;
+}
+.footer-link a:visited{
+	color: white;
+}
+
+.footer{
+	width: 100%;
+	display: inline-block;
+  padding: 20px;
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	color: white;
+}
+
+
+.loader {
+  border: 8px solid grey;
+  border-radius: 50%;
+  border-top: 8px solid black;
+  width: 50px;
+  height: 50px;
+  -webkit-animation: spin 1s linear infinite; /* Safari */
+  animation: spin 1s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
