@@ -9,11 +9,55 @@
 
         <!-- Main component for a primary marketing message or call to action -->
         <div class="jumbotron bg-dark">
-          <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-          <div class="elfsight-app-62762ea2-1b96-4a59-b8c8-a52820972bc4"></div>
+          <div class="wrapper">
+      				<div class="jcarousel-wrapper">
+      						<div class="jcarousel">
+      								<ul id="jcarousel-feed">
+      								</ul>
+      						</div>
+
+      						<a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+      						<a href="#" class="jcarousel-control-next">&rsaquo;</a>
+      				</div>
+      		</div>
+
+
+            <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+            <div class="elfsight-app-62762ea2-1b96-4a59-b8c8-a52820972bc4"></div>
         </div>
 
       </div> <!-- /container -->
+
+      <script type="text/javascript" src="jquery.instagramFeed.min.js"></script>
+    	<script type="text/javascript">
+    		(function($){
+    			$(window).on('load', function(){
+    				function displayRaw(rawJson){
+    					var json = JSON.parse(rawJson);
+    					var imageNodes = json["images"];
+    					var jcarousel = $("#jcarousel-feed");
+    					for (var node in imageNodes){
+    						// Link to instagram photo
+    						var short_url = "https://www.instagram.com/p/" + imageNodes[node]["node"]["shortcode"];
+    						// Original dimentions
+    						// var src_url = imageNodes[node]["node"]["display_url"];
+    						// 640 x 640 pixels
+    						var src_url = imageNodes[node]["node"]["thumbnail_resources"][4]["src"];
+
+    						var img = '<li><img src="' + src_url + '" alt="bolderink instagram image '+node+'" style="width:100%;float:left;"></li>';
+    						jcarousel.append(img);
+    					}
+    				}
+
+
+    				$.instagramFeed({
+    					'username': 'bolderink',
+    					'get_raw_json': true,
+    					'callback': displayRaw
+    				});
+    			});
+    		})(jQuery);
+    	</script>
 
       <% include ./include/scripts %>
       <% include ./include/footer %>

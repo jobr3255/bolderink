@@ -10,6 +10,7 @@
     <!-- Main component for a primary marketing message or call to action -->
     <div class="jumbotron bg-dark">
       <h3 class="center">Artists</h3>
+
       <div class="row">
         <div class="six columns">
           <div id="tattoosbymijo"></div>
@@ -30,7 +31,7 @@
 
       <div class="row">
         <div class="six columns">
-          <div id="bolderink"></div>
+          <div id="peewee"></div>
         </div>
         <div class="six columns">
           <div id="ploddingtortoise"></div>
@@ -50,8 +51,7 @@
           "Lance Talon": "lancetalon",
           "Joel Long": "joeldlong",
           "Brian": "bolder_brian_tattoo",
-          "Aaron": "ploddingtortoise",
-          "Peewee": "bolderink"};
+          "Aaron": "ploddingtortoise",};
 
         var instagram, artistDiv, artistLink, artistFeed;
         for (var artist in artists) {
@@ -74,6 +74,25 @@
     					'margin': 1
     				});
         }
+
+        // Loads bolderink instagram feed but link goes to strory for Peewee
+        artistDiv = $("#peewee");
+        artistLink = "<h4><a class='artist' href='https://www.instagram.com/stories/highlights/18028462909032118/' target='_blank'>Peewee</a></h4>";
+        artistFeed = "<div id='instagram-peewee' class='instagram_feed'><div class='loader'></div></div>";
+        artistDiv.append(artistLink, artistFeed);
+        $.instagramFeed({
+          'username': "bolderink",
+          'container': "#instagram-peewee",
+          'display_profile': false,
+          'display_biography': false,
+          'display_gallery': true,
+          'get_raw_json': false,
+          'callback': null,
+          'styling': true,
+          'items': 4,
+          'items_per_row': 2,
+          'margin': 1
+        });
 
 			});
 		})(jQuery);

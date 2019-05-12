@@ -15,6 +15,7 @@ app.use(express.static(path.join(__dirname,'css')))
 app.use(express.static(path.join(__dirname, 'node_modules')))
 app.use(express.static(path.join(__dirname, 'images')));
 app.use(express.static(path.join(__dirname, 'js')));
+app.use(express.static(path.join(__dirname, 'vendor')));
 
 // Set the view engine to ejs
 app.set('view engine', 'ejs')
